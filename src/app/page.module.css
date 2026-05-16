@@ -26,7 +26,8 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  background-color: var(--foreground);
+  /* background-color: var(--foreground); */
+  background-color: transparent;
   padding: 120px 60px;
 }
 
@@ -129,7 +130,7 @@ a.secondary {
   }
 
   .page {
-    --background: #000;
+    --background: #transparent;
     --foreground: #000;
 
     --text-primary: #ededed;

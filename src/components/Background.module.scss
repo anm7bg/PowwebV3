@@ -1,0 +1,45 @@
+/* Background.module.scss */
+
+.video-background {
+  position: fixed;
+  will-change: transform; /* parallax will be applied via transform */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  /* Optional: you can still use background-attachment via CSS if needed,
+     but video element itself will be fixed */
+}
+
+.content-overlay {
+  position: relative;
+  z-index: 1;
+  /* Optional overlay for readability */
+  background: rgba(0, 0, 0, 0.8);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+
+.content-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+/* Fallback for browsers that cannot display the video as a background */
+.no-video-support {
+  background-color: #000; /* dark fallback */
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
