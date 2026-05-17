@@ -1,24 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import { blogCard } from '@/lib/interface';
-import { getProekti } from '@/lib/service';
-import ProektiCatMenu from "../components/ProektiCatMenu";
+import { getSpaProjects } from '@/lib/service';
+import ProektiCatMenu from "../../components/ProektiCatMenu";
 
 
 const BlogPage = async () => {
-  const posts: blogCard[] = await getProekti();
+  const posts: blogCard[] = await getSpaProjects();
   console.log("Posts")
   console.log(posts)
 
   return (
     // <p>Loading</p>
-    <div className="proekti-page max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
-      <h1 className="font-display-lg text-[40px] md:text-[50px] font-extrabold text-on-surface tracking-tighter uppercase mb-4 text-center leading-tight">
-        Проекти
+    <div className="el-mag-page max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+      <h1 className="font-display-lg text-[32px] md:text-[40px] font-extrabold text-on-surface tracking-tighter uppercase mb-4 text-center leading-tight">
+        SPA
       </h1>
       <div className="w-16 h-1 bg-primary-container mx-auto mb-8" />
       <p className="text-body-lg font-body-lg text-on-surface-variant max-w-3xl mx-auto text-center mb-16">
-        Открийте реализираните уеб проекти от Powweb.bg – вашият доверен партньор в уеб дизайна и разработката. Вдъхновете се от иновативни решения, модерни дизайни и професионални услуги, които превръщат идеите в успешни онлайн платформи. Разгледайте нашето портфолио от сайтове за бизнес, е-търговия и персонализирани проекти. С Powweb.bg мечтите ви стават реалност!
+        Открийте професионални решения за фирмени сайтове, блогове и SPA приложения с Powweb.bg. Ние предлагаме персонализиран дизайн, бърза скорост и интуитивен потребителски интерфейс, за да ви помогнем да изградите успешен онлайн образ. Доверете се на експертите в уеб разработката и създайте уебсайт, който впечатлява и привлича клиенти!
       </p>
       <ProektiCatMenu />
 
