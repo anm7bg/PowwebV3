@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import CopyEmailButton from "@/app/components/CopyEmailButton";
 
 export default function Home() {
   return (
@@ -361,15 +362,7 @@ export default function Home() {
             <button className="bg-primary-container text-black font-label-md text-label-md px-8 py-4 rounded-DEFAULT glow-effect transition-all duration-300 w-full sm:w-auto text-[16px] font-semibold">
               Безплатна консултация
             </button>
-            <a
-              className="flex items-center gap-2 text-on-surface hover:text-primary-container transition-colors p-4 border border-white/10 rounded-DEFAULT bg-surface w-full sm:w-auto justify-center"
-              href="mailto:powwebs@gmail.com"
-            >
-              <span className="material-symbols-outlined">mail</span>
-              <span className="font-label-md text-label-md">
-                powwebs@gmail.com
-              </span>
-            </a>
+            <CopyEmailButton email="powwebs@gmail.com" />
           </div>
         </div>
       </section>
