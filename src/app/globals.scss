@@ -201,8 +201,15 @@ nav {
 
 
 #uslugi,
-#kontakti-home {
+#kontakti-home,
+.blog-page,
+.proekti-page {
   background: rgba(0, 0, 0, 0.9);
+}
+
+.blog-page,
+.proekti-page {
+  max-width: none;
 }
 
 .proekti-page,

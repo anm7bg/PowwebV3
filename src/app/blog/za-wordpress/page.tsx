@@ -1,28 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
-import { blogCard } from '@/lib/interface';
-import { getSpaProjects } from '@/lib/service';
-import ProektiCatMenu from "../../components/ProektiCatMenu";
+import { blogCard } from "@/lib/interface";
+import { getWpPosts } from "@/lib/service";
+import PostCatMenu from "../../components/PostCatMenu";
 
-
-const BlogPage = async () => {
-  const posts: blogCard[] = await getSpaProjects();
-  console.log("Posts")
-  console.log(posts)
+const WpPublikacii = async () => {
+  const posts: blogCard[] = await getWpPosts();
 
   return (
-    // <p>Loading</p>
-    <div className="proekti-page el-mag-page max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
-      <h1 className="font-display-lg text-[32px] md:text-[40px] font-extrabold text-on-surface tracking-tighter uppercase mb-4 text-center leading-tight">
-        SPA
+    <div className="blog-page max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+      <h1 className="font-display-lg text-[40px] md:text-[50px] font-extrabold text-on-surface tracking-tighter uppercase mb-4 text-center leading-tight">
+        За WordPress
       </h1>
       <div className="w-16 h-1 bg-primary-container mx-auto mb-8" />
       <p className="text-body-lg font-body-lg text-on-surface-variant max-w-3xl mx-auto text-center mb-16">
-        Открийте професионални решения за фирмени сайтове, блогове и SPA приложения с Powweb.bg. Ние предлагаме персонализиран дизайн, бърза скорост и интуитивен потребителски интерфейс, за да ви помогнем да изградите успешен онлайн образ. Доверете се на експертите в уеб разработката и създайте уебсайт, който впечатлява и привлича клиенти!
+        Категорията - За WordPress предлага пълна гама от ресурси и инструменти за изграждане и оптимизация на WordPress сайтове. Открийте полезни ръководства, плъгини, теми и съвети за подобряване на функционалността, сигурността и SEO оптимизацията на вашия уебсайт.
       </p>
-      <ProektiCatMenu />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <PostCatMenu />
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
         {posts?.map((post: any) => (
           <article key={post.slug} className="glass-card flex flex-col group hover:border-primary-container transition-all duration-300 p-4 inner-glow">
             <div className="aspect-video bg-surface-container-lowest mb-6 flex items-center justify-center p-0 overflow-hidden rounded-sm border border-outline-variant relative">
@@ -57,4 +54,4 @@ const BlogPage = async () => {
   );
 };
 
-export default BlogPage;
+export default WpPublikacii;

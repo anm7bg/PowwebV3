@@ -52,9 +52,9 @@ export default function NavBar() {
 
         {/* Desktop CTA + Hamburger */}
         <div className="flex items-center gap-4">
-          <button className="hidden md:inline-flex bg-primary-container text-black font-label-md text-label-md px-6 py-2 rounded-DEFAULT border border-transparent hover:shadow-[0_0_20px_rgba(0,229,255,0.15)] transition-all duration-300 active:scale-95">
-            Започнете проект
-          </button>
+          <Link href="/#kontakti-home" className="hidden md:inline-flex bg-primary-container text-black font-label-md text-label-md px-6 py-2 rounded-DEFAULT border border-transparent hover:shadow-[0_0_20px_rgba(0,229,255,0.15)] transition-all duration-300 active:scale-95">
+            Безплатна консултация
+          </Link>
 
           {/* Hamburger – mobile only */}
           <button
