@@ -34,7 +34,7 @@ export default function NavBar() {
       <div className="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         {/* Logo */}
         <div className="flex items-center">
-          <a href="/"><img className="h-16" src="/images/logo.png" alt="Logo" /></a>
+          <Link href="/"><img className="h-16" src="/images/logo.png" alt="Logo" /></Link>
         </div>
 
         {/* Desktop nav */}
@@ -65,19 +65,16 @@ export default function NavBar() {
             onClick={() => setOpen((v) => !v)}
           >
             <span
-              className={`block w-5 h-[2px] bg-on-surface rounded-full transition-all duration-300 origin-center ${
-                open ? "translate-y-[7px] rotate-45" : ""
-              }`}
+              className={`block w-5 h-[2px] bg-on-surface rounded-full transition-all duration-300 origin-center ${open ? "translate-y-[7px] rotate-45" : ""
+                }`}
             />
             <span
-              className={`block w-5 h-[2px] bg-on-surface rounded-full transition-all duration-200 ${
-                open ? "opacity-0 scale-x-0" : ""
-              }`}
+              className={`block w-5 h-[2px] bg-on-surface rounded-full transition-all duration-200 ${open ? "opacity-0 scale-x-0" : ""
+                }`}
             />
             <span
-              className={`block w-5 h-[2px] bg-on-surface rounded-full transition-all duration-300 origin-center ${
-                open ? "-translate-y-[7px] -rotate-45" : ""
-              }`}
+              className={`block w-5 h-[2px] bg-on-surface rounded-full transition-all duration-300 origin-center ${open ? "-translate-y-[7px] -rotate-45" : ""
+                }`}
             />
           </button>
         </div>
@@ -86,9 +83,8 @@ export default function NavBar() {
       {/* Mobile drawer */}
       <div
         id="mobile-menu"
-        className={`md:hidden fixed inset-0 top-20 z-40 transition-all duration-300 ${
-          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`md:hidden fixed inset-0 top-20 z-40 transition-all duration-300 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
       >
         {/* Backdrop */}
         <div
@@ -98,9 +94,8 @@ export default function NavBar() {
 
         {/* Panel */}
         <div
-          className={`absolute top-0 left-0 right-0 bg-surface-container-low border-b border-white/10 shadow-2xl transition-transform duration-300 ${
-            open ? "translate-y-0" : "-translate-y-4"
-          }`}
+          className={`absolute top-0 left-0 right-0 bg-surface-container-low border-b border-white/10 shadow-2xl transition-transform duration-300 ${open ? "translate-y-0" : "-translate-y-4"
+            }`}
         >
           <ul className="flex flex-col px-margin-mobile py-6 gap-1">
             {navLinks.map((link, i) => (

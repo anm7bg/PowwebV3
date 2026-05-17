@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sofia_Sans } from "next/font/google";
 import "./globals.scss";
 import NavBar from "./components/NavBar";
+import Link from "next/link";
 
 const sofiaSans = Sofia_Sans({
   variable: "--font-sofia",
@@ -10,7 +11,7 @@ const sofiaSans = Sofia_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "POWWEBS - Професионална изработка, SEO и поддръжка",
+  title: "Powweb.bg - Професионална изработка, SEO и поддръжка",
   description: "Професионални уеб решения за модерния бизнес. Изработка на уебсайтове, е-магазини, SEO и техническа поддръжка.",
 };
 
@@ -45,48 +46,56 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
 
         {/* Footer */}
-        <footer className="bg-surface-container-lowest border-t border-white/5 w-full py-16">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <footer className="bg-surface-container-lowest border-t border-white/5 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-5">
             <div className="col-span-1 md:col-span-1 mb-8 md:mb-0">
-              <span className="text-headline-sm font-headline-sm font-bold text-primary dark:text-primary-fixed-dim block mb-4">
-                POWWEBS
-              </span>
-              <p className="text-body-md font-body-md text-on-surface-variant max-w-xs">
+              <img className="h-16" src="/images/logo.png" alt="Logo" />
+              {/* <p className="text-body-md font-body-md text-on-surface-variant max-w-xs">
                 Професионални уеб решения за модерния бизнес.
-              </p>
+              </p> */}
             </div>
             <div className="col-span-1 md:col-span-2 flex flex-wrap gap-x-8 gap-y-4">
-              <a
+              <Link
                 className="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors duration-200"
-                href="#"
+                href="/#za-nas"
+              >
+                За нас
+              </Link>
+              <Link
+                className="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+                href="/#uslugi"
               >
                 Услуги
-              </a>
-              <a
+              </Link>
+              <Link
                 className="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors duration-200"
-                href="#"
+                href="/blog"
               >
-                Експертиза
-              </a>
-              <a
+                Блог
+              </Link>
+              <Link
                 className="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors duration-200"
-                href="#"
+                href="/proekti"
+              >
+                Проекти
+              </Link>
+              <Link
+                className="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors duration-200"
+                href="/#kontakti-home"
               >
                 Контакти
-              </a>
-              <a
-                className="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors duration-200"
-                href="#"
-              >
-                Политика за поверителност
-              </a>
+              </Link>
+              <p className="copyrights text-label-sm font-label-sm text-on-surface-variant">
+                © 2024 Powweb.bg Всички права запазени | Професионални уеб решения за модерния бизнес.
+              </p>
             </div>
-            <div className="col-span-1 md:col-span-1 text-left md:text-right">
+            {/* <div className="col-span-1 md:col-span-1 text-left md:text-right">
               <p className="text-label-sm font-label-sm text-on-surface-variant">
                 © 2024 POWWEBS. Всички права запазени.
               </p>
-            </div>
+            </div> */}
           </div>
+
         </footer>
       </body>
     </html>
