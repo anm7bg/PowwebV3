@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="bg"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>POWWEBS - Професионална изработка, SEO и поддръжка</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#2a2a2b",
+                        "secondary-container": "#7000ff",
+                        "on-tertiary-fixed": "#00210e",
+                        "on-tertiary-container": "#006638",
+                        "on-secondary-fixed-variant": "#5700c9",
+                        "tertiary-container": "#00ee8a",
+                        "tertiary-fixed-dim": "#00e383",
+                        "on-surface": "#e5e2e3",
+                        "inverse-primary": "#006875",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary": "#00391d",
+                        "primary-fixed-dim": "#00daf3",
+                        "on-primary-fixed-variant": "#004f58",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#1c1b1c",
+                        "primary-container": "#00e5ff",
+                        "on-secondary-fixed": "#23005b",
+                        "secondary-fixed": "#e9ddff",
+                        "inverse-surface": "#e5e2e3",
+                        "outline": "#849396",
+                        "on-secondary": "#3c0090",
+                        "on-background": "#e5e2e3",
+                        "secondary-fixed-dim": "#d1bcff",
+                        "on-surface-variant": "#bac9cc",
+                        "on-secondary-container": "#ddcdff",
+                        "surface": "#131314",
+                        "tertiary": "#aaffc3",
+                        "on-error": "#690005",
+                        "on-primary-fixed": "#001f24",
+                        "surface-variant": "#353436",
+                        "background": "#131314",
+                        "surface-container-highest": "#353436",
+                        "surface-container-lowest": "#0e0e0f",
+                        "on-primary": "#00363d",
+                        "surface-bright": "#3a393a",
+                        "tertiary-fixed": "#5bffa1",
+                        "outline-variant": "#3b494c",
+                        "primary": "#c3f5ff",
+                        "surface-tint": "#00daf3",
+                        "surface-container": "#201f20",
+                        "surface-dim": "#131314",
+                        "primary-fixed": "#9cf0ff",
+                        "on-tertiary-fixed-variant": "#00522c",
+                        "inverse-on-surface": "#313031",
+                        "secondary": "#d1bcff",
+                        "on-primary-container": "#00626e",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Sofia Sans"],
+                        "display-lg": ["Sofia Sans"],
+                        "label-sm": ["Sofia Sans"],
+                        "label-md": ["Sofia Sans"],
+                        "body-md": ["Sofia Sans"],
+                        "headline-sm": ["Sofia Sans"],
+                        "headline-md": ["Sofia Sans"],
+                        "body-lg": ["Sofia Sans"],
+                        "headline-lg": ["Sofia Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-background/80 backdrop-blur-md dark:bg-background/80 border-b border-white/10 shadow-sm dark:shadow-[0_0_20px_rgba(0,229,255,0.05)]">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center">
+<span class="text-headline-sm font-headline-sm font-bold tracking-tighter text-primary dark:text-primary-fixed-dim">POWWEBS</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-on-surface hover:text-primary transition-colors hover:text-primary transition-all duration-300" href="#">Услуги</a>
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-on-surface hover:text-primary transition-colors hover:text-primary transition-all duration-300" href="#">Експертиза</a>
+<a class="text-label-md font-label-md text-on-surface-variant dark:text-on-surface hover:text-primary transition-colors hover:text-primary transition-all duration-300" href="#">Контакти</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary-container text-black font-label-md text-label-md px-6 py-2 rounded-DEFAULT border border-transparent hover:shadow-[0_0_20px_rgba(0,229,255,0.15)] transition-all duration-300 active:scale-95">Започнете проект</button>
+</div>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[80vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Cyberpunk futuristic interface" class="w-full h-full object-cover opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhOX-oF8vmPZmjhBEeVjf3xkXepPYx6EJdLyLFZK5OzPYBc2hUoVxH1oQSaR2JcmELxQFcErMZTVds9S6ldQ6U5nMXxGKOXUZk3CWM5izrhmT-rHAhEu5NKm0sUARnNviOnJY46BOFOl0dAIoPeg1nYP9-4VdIloprzf99thwe8l3QqOWwUjl4vtMq3WIQ2yZAfR2uwQVj46vcz69SB4QVhu4AOmtvphZkfE5rg407fjgoXqXdxZzsW6Hg_Wkg0bZ6Xh2CDJuPIx4-"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<div class="inline-block px-4 py-1.5 mb-8 rounded-DEFAULT bg-primary-container/10 border border-primary-container/20 backdrop-blur-sm">
+<span class="text-primary-container font-label-sm text-label-sm uppercase tracking-widest">Digital Solutions Agency</span>
+</div>
+<h1 class="text-headline-lg-mobile font-headline-lg-mobile md:text-display-lg md:font-display-lg text-white mb-6 max-w-4xl mx-auto drop-shadow-lg">
+                    Професионална изработка, SEO и поддръжка на сайтове, електронни магазини и SPA
+                </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+                    Търсите надежден партньор за стартиране или развитие на вашия онлайн бизнес? Ние предоставяме високотехнологични решения, съобразени с най-новите стандарти за сигурност и производителност.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<button class="w-full sm:w-auto bg-primary-container text-black font-label-md text-label-md px-8 py-3 rounded-DEFAULT glow-effect transition-all duration-300 flex items-center justify-center gap-2">
+<span>Свържете се с нас</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="w-full sm:w-auto bg-transparent border border-primary-container text-primary-container hover:bg-primary-container/10 font-label-md text-label-md px-8 py-3 rounded-DEFAULT transition-all duration-300">
+                        Вижте услугите
+                    </button>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section class="py-24 bg-surface-container-low border-y border-white/5 relative overflow-hidden">
+<!-- Subtle background accent -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary-container/5 to-transparent pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="mb-16 text-center md:text-left">
+<h2 class="text-headline-md font-headline-md text-white mb-4">Дългогодишен опит и модерни технологии</h2>
+<div class="h-1 w-16 bg-primary-container rounded-full mx-auto md:mx-0"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+<!-- WordPress Column -->
+<div class="bg-surface border border-white/10 rounded-xl p-8 hover:border-primary-container/30 transition-colors duration-300 group">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-headline-sm font-headline-sm text-white">WordPress Екосистема</h3>
+<span class="px-3 py-1 bg-surface-container-high rounded text-label-sm font-label-sm text-on-surface-variant border border-white/5">От 2013 г.</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">
+                            Дълбоко познаване на архитектурата на WordPress. Разработка на къстъм теми, плъгини и комплексни WooCommerce решения, оптимизирани за скорост и сигурност.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary-container/10 text-primary-fixed-dim rounded border border-primary-container/20 text-label-sm font-label-sm">PHP</span>
+<span class="px-3 py-1 bg-primary-container/10 text-primary-fixed-dim rounded border border-primary-container/20 text-label-sm font-label-sm">MySQL</span>
+<span class="px-3 py-1 bg-primary-container/10 text-primary-fixed-dim rounded border border-primary-container/20 text-label-sm font-label-sm">WooCommerce</span>
+<span class="px-3 py-1 bg-primary-container/10 text-primary-fixed-dim rounded border border-primary-container/20 text-label-sm font-label-sm">REST API</span>
+</div>
+</div>
+<!-- React Column -->
+<div class="bg-surface border border-white/10 rounded-xl p-8 hover:border-primary-container/30 transition-colors duration-300 group">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-headline-sm font-headline-sm text-white">React &amp; Next.js</h3>
+<span class="px-3 py-1 bg-surface-container-high rounded text-label-sm font-label-sm text-primary-container border border-primary-container/20 shadow-[0_0_10px_rgba(0,229,255,0.1)]">От 2023 г.</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">
+                            Изграждане на светкавично бързи Single Page Applications (SPA) и статично генерирани сайтове (SSG/SSR) с най-модерния технологичен стек.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary-container/10 text-primary-fixed-dim rounded border border-primary-container/20 text-label-sm font-label-sm">React 18</span>
+<span class="px-3 py-1 bg-primary-container/10 text-primary-fixed-dim rounded border border-primary-container/20 text-label-sm font-label-sm">Next.js 14</span>
+<span class="px-3 py-1 bg-primary-container/10 text-primary-fixed-dim rounded border border-primary-container/20 text-label-sm font-label-sm">TypeScript</span>
+<span class="px-3 py-1 bg-primary-container/10 text-primary-fixed-dim rounded border border-primary-container/20 text-label-sm font-label-sm">Tailwind CSS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-32 bg-background">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="text-headline-lg-mobile font-headline-lg-mobile md:text-headline-lg md:font-headline-lg text-white mb-4">Какви услуги предлагаме?</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">Пълен цикъл от услуги за дигитализация и разрастване на вашия бизнес.</p>
+</div>
+<!-- Bento Grid Style Layout -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Web Dev - Large Card -->
+<div class="md:col-span-2 bg-[#161618] border border-white/5 rounded-xl p-8 hover:border-primary-container/20 transition-all duration-300 relative overflow-hidden group">
+<div class="absolute -right-10 -top-10 text-primary-container/5 transform group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined" style="font-size: 200px;">code</span>
+</div>
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded bg-primary-container/10 flex items-center justify-center mb-6 border border-primary-container/20">
+<span class="material-symbols-outlined text-primary-container">web</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-white mb-4">Изработка на уебсайтове и е-магазини</h3>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-md">От корпоративни сайтове до сложни платформи за електронна търговия. Фокус върху UI/UX, конверсии и безпроблемна работа на всяко устройство.</p>
+</div>
+<div class="mt-8 flex gap-2">
+<span class="px-2 py-1 bg-surface rounded text-label-sm font-label-sm text-on-surface border border-white/10">B2B</span>
+<span class="px-2 py-1 bg-surface rounded text-label-sm font-label-sm text-on-surface border border-white/10">B2C</span>
+<span class="px-2 py-1 bg-surface rounded text-label-sm font-label-sm text-on-surface border border-white/10">SaaS UI</span>
+</div>
+</div>
+</div>
+<!-- SEO -->
+<div class="bg-[#161618] border border-white/5 rounded-xl p-8 hover:border-primary-container/20 transition-all duration-300">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center mb-6 border border-white/10">
+<span class="material-symbols-outlined text-white">troubleshoot</span>
+</div>
+<h3 class="text-[20px] font-headline-sm font-semibold text-white mb-3">SEO Оптимизация</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Техническо и съдържателно оптимизиране за водещи позиции в търсачките и органичен трафик.</p>
+</div>
+<!-- Speed -->
+<div class="bg-[#161618] border border-white/5 rounded-xl p-8 hover:border-primary-container/20 transition-all duration-300">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center mb-6 border border-white/10">
+<span class="material-symbols-outlined text-white">speed</span>
+</div>
+<h3 class="text-[20px] font-headline-sm font-semibold text-white mb-3">Оптимизация на скоростта</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Редуциране на времето за зареждане (Core Web Vitals) за по-добро потребителско изживяване.</p>
+</div>
+<!-- Maintenance -->
+<div class="bg-[#161618] border border-white/5 rounded-xl p-8 hover:border-primary-container/20 transition-all duration-300">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center mb-6 border border-white/10">
+<span class="material-symbols-outlined text-white">build</span>
+</div>
+<h3 class="text-[20px] font-headline-sm font-semibold text-white mb-3">Техническа поддръжка</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Регулярни ъпдейти, бекъпи, мониторинг и бърза реакция при проблеми 24/7.</p>
+</div>
+<!-- Server Config -->
+<div class="bg-[#161618] border border-white/5 rounded-xl p-8 hover:border-primary-container/20 transition-all duration-300">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center mb-6 border border-white/10">
+<span class="material-symbols-outlined text-white">dns</span>
+</div>
+<h3 class="text-[20px] font-headline-sm font-semibold text-white mb-3">Сървърна конфигурация</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Настройка на VPS/Dedicated сървъри, Nginx/Apache оптимизация и сигурност.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Us Section -->
+<section class="py-24 bg-surface border-y border-white/5 relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<h2 class="text-headline-md font-headline-md text-white mb-6">Защо да изберете нас?</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-8">Ние не просто пишем код; ние изграждаме дигитални активи, които носят реална стойност и възвръщаемост на инвестициите.</p>
+<div class="space-y-6">
+<div class="flex gap-4 items-start">
+<div class="mt-1 w-6 h-6 rounded-full bg-primary-container/10 flex items-center justify-center border border-primary-container/30 flex-shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary-container">check</span>
+</div>
+<div>
+<h4 class="text-[18px] font-semibold text-white mb-1">Безкомпромисно внимание към детайла</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Чист код, перфектен пиксел дизайн и изчистена архитектура за дългосрочна стабилност.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="mt-1 w-6 h-6 rounded-full bg-primary-container/10 flex items-center justify-center border border-primary-container/30 flex-shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary-container">check</span>
+</div>
+<div>
+<h4 class="text-[18px] font-semibold text-white mb-1">В крак с актуалните тенденции</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Непрекъснато обучение и имплементиране на най-новите фреймуърци и практики (React 18+, Next.js App Router).</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="mt-1 w-6 h-6 rounded-full bg-primary-container/10 flex items-center justify-center border border-primary-container/30 flex-shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary-container">check</span>
+</div>
+<div>
+<h4 class="text-[18px] font-semibold text-white mb-1">Пълна прозрачност</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Ясна комуникация, спазване на срокове и детайлно отчитане на извършената работа.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<!-- Abstract Tech Visual Container -->
+<div class="bg-[#121214] rounded-xl border border-[#2A2A2C] p-6 relative shadow-2xl">
+<div class="flex items-center gap-2 mb-4 border-b border-[#2A2A2C] pb-4">
+<div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+<div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+<span class="ml-2 text-label-sm font-label-sm text-on-surface-variant font-mono">system_architecture.ts</span>
+</div>
+<pre class="text-label-sm font-label-sm text-on-surface-variant font-mono overflow-x-auto"><code class="text-primary-container">import</code> { Quality, Speed, Security } <code class="text-primary-container">from</code> '@powwebs/core';
+
+<code class="text-primary-container">const</code> project = <code class="text-primary-container">new</code> Project({
+  client: <span class="text-green-400">'Visionary Brand'</span>,
+  stack: [<span class="text-green-400">'Next.js'</span>, <span class="text-green-400">'Tailwind'</span>, <span class="text-green-400">'TypeScript'</span>],
+  requirements: {
+    performance: <span class="text-yellow-400">100</span>, <span class="text-gray-500">// Lighthouse score</span>
+    accessibility: <span class="text-yellow-400">100</span>,
+    seo: <span class="text-yellow-400">100</span>
+  }
+});
+
+<code class="text-primary-container">await</code> project.deploy().then(() =&gt; {
+  console.log(<span class="text-green-400">'Success: Digital presence elevated.'</span>);
+});
+                            </pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 bg-background relative overflow-hidden">
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-96 h-96 bg-primary-container/5 rounded-full blur-3xl"></div>
+</div>
+<div class="max-w-3xl mx-auto px-margin-mobile text-center relative z-10">
+<h2 class="text-headline-lg-mobile font-headline-lg-mobile md:text-headline-lg md:font-headline-lg text-white mb-6">Готови ли сте да развиете бизнеса си онлайн?</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-10">Свържете се с нас за безплатна консултация и анализ на вашия проект. Нека обсъдим как можем да ви помогнем да постигнете целите си.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+<button class="bg-primary-container text-black font-label-md text-label-md px-8 py-4 rounded-DEFAULT glow-effect transition-all duration-300 w-full sm:w-auto text-[16px] font-semibold">
+                        Безплатна консултация
+                    </button>
+<a class="flex items-center gap-2 text-on-surface hover:text-primary-container transition-colors p-4 border border-white/10 rounded-DEFAULT bg-surface w-full sm:w-auto justify-center" href="mailto:powwebs@gmail.com">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-md text-label-md">powwebs@gmail.com</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-white/5 w-full py-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 mb-8 md:mb-0">
+<span class="text-headline-sm font-headline-sm font-bold text-primary dark:text-primary-fixed-dim block mb-4">POWWEBS</span>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-xs">Професионални уеб решения за модерния бизнес.</p>
+</div>
+<div class="col-span-1 md:col-span-2 flex flex-wrap gap-x-8 gap-y-4">
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Услуги</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Експертиза</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Контакти</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Политика за поверителност</a>
+</div>
+<div class="col-span-1 md:col-span-1 text-left md:text-right">
+<p class="text-label-sm font-label-sm text-on-surface-variant">© 2024 POWWEBS. Всички права запазени.</p>
+</div>
+</div>
+</footer>
+</body></html>
