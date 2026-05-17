@@ -121,7 +121,7 @@ export default function Home() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-32 bg-background">
+      <section id="uslugi" className="py-32 bg-background">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="text-center mb-16">
             <h2 className="text-headline-lg-mobile font-headline-lg-mobile md:text-headline-lg md:font-headline-lg text-white mb-4">

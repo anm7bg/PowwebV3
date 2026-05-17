@@ -39,13 +39,13 @@ export default function RootLayout({
             <div className="hidden md:flex items-center gap-8">
               <a
                 className="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-all duration-300"
-                href="#"
+                href="/#uslugi"
               >
                 Услуги
               </a>
               <a
                 className="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-all duration-300"
-                href="#"
+                href="#uslugi"
               >
                 Експертиза
               </a>
