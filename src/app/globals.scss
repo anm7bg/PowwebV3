@@ -161,8 +161,7 @@ body {
   }
 }
 
-// Ensure page sections with bg colours stay visible above the video
-body > nav,
+// Ensure page sections stay visible above the fixed video background
 body > main,
 body > footer {
   position: relative;

@@ -56,9 +56,9 @@ export default function RootLayout({
               </a>
               <a
                 className="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-all duration-300"
-                href="#uslugi"
+                href="/blog"
               >
-                Експертиза
+                Блог
               </a>
               <a
                 className="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-all duration-300"
