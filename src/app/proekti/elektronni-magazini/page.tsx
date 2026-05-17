@@ -45,7 +45,7 @@ const BlogPage = async () => {
                 dangerouslySetInnerHTML={{ __html: post.excerpt }}
               />
             </div>
-            <Link href={`/proekti/${post.slug}`} className="w-full mt-auto">
+            <Link target="_blank" rel="nofollow" href={`${post.url.projectLink}`} className="w-full mt-auto">
               <button className="w-full py-3 border border-outline-variant bg-surface-container-highest text-primary-fixed-dim font-label-md text-label-md uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-fixed transition-all active:scale-95">
                 Виж
               </button>
