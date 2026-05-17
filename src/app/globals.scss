@@ -69,6 +69,7 @@
   --font-headline-md: var(--font-sofia), sans-serif;
   --font-body-lg: var(--font-sofia), sans-serif;
   --font-headline-lg: var(--font-sofia), sans-serif;
+  --font-body-sm: var(--font-sofia), sans-serif;
 
   --text-headline-lg-mobile: 32px;
   --text-headline-lg-mobile--line-height: 40px;
@@ -93,6 +94,10 @@
   --text-body-md--line-height: 24px;
   --text-body-md--letter-spacing: 0em;
   --text-body-md--font-weight: 400;
+
+  --text-body-sm: 14px;
+  --text-body-sm--line-height: 20px;
+  --text-body-sm--font-weight: 400;
 
   --text-headline-sm: 24px;
   --text-headline-sm--line-height: 32px;
@@ -162,4 +167,26 @@ body > main,
 body > footer {
   position: relative;
   z-index: 1;
+}
+
+// Projects page
+.cyber-grid {
+  background-image:
+    linear-gradient(to right, #2a2a2c 1px, transparent 1px),
+    linear-gradient(to bottom, #2a2a2c 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.glass-card {
+  background: rgba(32, 31, 32, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid #3b494b;
+}
+
+.active-filter {
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+.inner-glow {
+  box-shadow: inset 0 0 20px rgba(0, 219, 233, 0.05);
 }
