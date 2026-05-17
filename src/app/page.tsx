@@ -10,7 +10,7 @@ export default function Home() {
             alt="Cyberpunk futuristic interface"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhOX-oF8vmPZmjhBEeVjf3xkXepPYx6EJdLyLFZK5OzPYBc2hUoVxH1oQSaR2JcmELxQFcErMZTVds9S6ldQ6U5nMXxGKOXUZk3CWM5izrhmT-rHAhEu5NKm0sUARnNviOnJY46BOFOl0dAIoPeg1nYP9-4VdIloprzf99thwe8l3QqOWwUjl4vtMq3WIQ2yZAfR2uwQVj46vcz69SB4QVhu4AOmtvphZkfE5rg407fjgoXqXdxZzsW6Hg_Wkg0bZ6Xh2CDJuPIx4-"
             fill
-            className="object-cover opacity-30"
+            className="object-cover opacity-0"
             unoptimized
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background"></div>

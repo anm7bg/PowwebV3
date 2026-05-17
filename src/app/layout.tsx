@@ -27,6 +27,17 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+        {/* Full-screen video background */}
+        <video
+          className="video-bg"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/video/background.mp4" type="video/mp4" />
+        </video>
+
         {/* TopNavBar */}
         <nav className="sticky top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-white/10 shadow-sm dark:shadow-[0_0_20px_rgba(0,229,255,0.05)]">
           <div className="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
@@ -34,7 +45,7 @@ export default function RootLayout({
               {/* <span className="text-headline-sm font-headline-sm font-bold tracking-tighter text-primary dark:text-primary-fixed-dim">
                 POWWEBS
               </span> */}
-              <a href="/"><img src="/logo.png" alt="Logo" /></a>
+              <a href="/"><img className="h-16" src="/images/logo.png" alt="Logo" /></a>
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a
