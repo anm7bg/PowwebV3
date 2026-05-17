@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Sofia_Sans } from "next/font/google";
 import "./globals.scss";
+import NavBar from "./components/NavBar";
 
 const sofiaSans = Sofia_Sans({
   variable: "--font-sofia",
@@ -39,47 +40,7 @@ export default function RootLayout({
         </video>
 
         {/* TopNavBar */}
-        <nav className="sticky top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-white/10 shadow-sm dark:shadow-[0_0_20px_rgba(0,229,255,0.05)]">
-          <div className="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div className="flex items-center">
-              {/* <span className="text-headline-sm font-headline-sm font-bold tracking-tighter text-primary dark:text-primary-fixed-dim">
-                POWWEBS
-              </span> */}
-              <a href="/"><img className="h-16" src="/images/logo.png" alt="Logo" /></a>
-            </div>
-            <div className="hidden md:flex items-center gap-8">
-              <a
-                className="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-all duration-300"
-                href="/#uslugi"
-              >
-                Услуги
-              </a>
-              <a
-                className="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-all duration-300"
-                href="/blog"
-              >
-                Блог
-              </a>
-              <a
-                className="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-all duration-300"
-                href="/proekti"
-              >
-                Проекти
-              </a>
-              <a
-                className="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-all duration-300"
-                href="#"
-              >
-                Контакти
-              </a>
-            </div>
-            <div className="flex items-center gap-4">
-              <button className="bg-primary-container text-black font-label-md text-label-md px-6 py-2 rounded-DEFAULT border border-transparent hover:shadow-[0_0_20px_rgba(0,229,255,0.15)] transition-all duration-300 active:scale-95">
-                Започнете проект
-              </button>
-            </div>
-          </div>
-        </nav>
+        <NavBar />
 
         <main className="flex-grow">{children}</main>
 

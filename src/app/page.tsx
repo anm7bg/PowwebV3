@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -31,25 +32,25 @@ export default function Home() {
             най-новите стандарти за сигурност и производителност.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="w-full sm:w-auto bg-primary-container text-black font-label-md text-label-md px-8 py-3 rounded-DEFAULT glow-effect transition-all duration-300 flex items-center justify-center gap-2">
+            <Link href="/#kontakti-home" className="w-full sm:w-auto bg-primary-container text-black font-label-md text-label-md px-8 py-3 rounded-DEFAULT glow-effect transition-all duration-300 flex items-center justify-center gap-2">
               <span>Свържете се с нас</span>
               <span className="material-symbols-outlined text-[18px]">
                 arrow_forward
               </span>
-            </button>
-            <button className="w-full sm:w-auto bg-transparent border border-primary-container text-primary-container hover:bg-primary-container/10 font-label-md text-label-md px-8 py-3 rounded-DEFAULT transition-all duration-300">
+            </Link>
+            <Link href="/#uslugi" className="w-full sm:w-auto bg-transparent border border-primary-container text-primary-container hover:bg-primary-container/10 font-label-md text-label-md px-8 py-3 rounded-DEFAULT transition-all duration-300 flex items-center justify-center">
               Вижте услугите
-            </button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Experience Section */}
-      <section className="py-24 bg-surface-container-low border-y border-white/5 relative overflow-hidden">
+      <section id="za-nas" className="py-10 bg-surface-container-low border-y border-white/5 relative overflow-hidden">
         {/* Subtle background accent */}
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary-container/5 to-transparent pointer-events-none"></div>
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
-          <div className="mb-16 text-center md:text-left">
+          <div className="mb-10 text-center md:text-left">
             <h2 className="text-headline-md font-headline-md text-white mb-4">
               Дългогодишен опит и модерни технологии
             </h2>
@@ -121,7 +122,7 @@ export default function Home() {
       </section>
 
       {/* Services Grid */}
-      <section id="uslugi" className="py-32 bg-background">
+      <section id="uslugi" className="py-10">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="text-center mb-16">
             <h2 className="text-headline-lg-mobile font-headline-lg-mobile md:text-headline-lg md:font-headline-lg text-white mb-4">
@@ -199,7 +200,7 @@ export default function Home() {
               </p>
             </div>
             {/* Maintenance */}
-            <div className="bg-[#161618] border border-white/5 rounded-xl p-8 hover:border-primary-container/20 transition-all duration-300">
+            <div className="md:col-span-2 bg-[#161618] border border-white/5 rounded-xl p-8 hover:border-primary-container/20 transition-all duration-300">
               <div className="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center mb-6 border border-white/10">
                 <span className="material-symbols-outlined text-white">build</span>
               </div>
@@ -212,7 +213,7 @@ export default function Home() {
               </p>
             </div>
             {/* Server Config */}
-            <div className="bg-[#161618] border border-white/5 rounded-xl p-8 hover:border-primary-container/20 transition-all duration-300">
+            {/* <div className="bg-[#161618] border border-white/5 rounded-xl p-8 hover:border-primary-container/20 transition-all duration-300">
               <div className="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center mb-6 border border-white/10">
                 <span className="material-symbols-outlined text-white">dns</span>
               </div>
@@ -223,13 +224,13 @@ export default function Home() {
                 Настройка на VPS/Dedicated сървъри, Nginx/Apache оптимизация
                 и сигурност.
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
       {/* Why Us Section */}
-      <section className="py-24 bg-surface border-y border-white/5 relative">
+      <section className="py-10 bg-surface border-y border-white/5 relative">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="flex flex-col md:flex-row gap-16 items-center">
             <div className="w-full md:w-1/2">
@@ -343,7 +344,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-background relative overflow-hidden">
+      <section id="kontakti-home" className="py-10 relative overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <div className="w-96 h-96 bg-primary-container/5 rounded-full blur-3xl"></div>
         </div>
