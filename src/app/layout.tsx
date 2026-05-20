@@ -11,8 +11,12 @@ const sofiaSans = Sofia_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://powweb.bg"),
   title: "Powweb.bg - Професионална изработка, SEO и поддръжка",
   description: "Професионални уеб решения за модерния бизнес. Изработка на уебсайтове, е-магазини, SEO и техническа поддръжка.",
+  alternates: {
+    canonical: "./",
+  },
 };
 
 export default function RootLayout({
